@@ -13,5 +13,5 @@ try {
 			(): Logger => logger.info(`🚀 server::running @ http://${conf.HOST}:${conf.PORT}`)
 		);
 } catch (error: any) {
-	logger.error(`🔺 ${error.name}::${error.message}`);
+	logger.error(`${error.name}::${error.message}`);
 }
