@@ -1,5 +1,6 @@
 import Bull, { Queue } from 'bull';
 import conf from '@src/config';
+import { emailProcess } from '@src/jobs';
 
 const emailQueue: Queue = new Bull('email', {
 	redis: {
@@ -8,8 +9,10 @@ const emailQueue: Queue = new Bull('email', {
 	},
 });
 
+emailQueue.process(emailProcess);
+
 const sendNewEmail = (data: any) => {
 	emailQueue.add(data, {});
 };
 
-export default emailQueue;
+export default { sendNewEmail };

@@ -25,6 +25,7 @@ module.exports = {
 		'@typescript-eslint/no-explicit-any': 'off',
 		'prettier/prettier': 'error',
 		'import/extensions': 'off',
+		'import/no-named-as-default-member': 'off',
 		'no-console': 'off',
 		'import/order': [
 			'error',
