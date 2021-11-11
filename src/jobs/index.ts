@@ -1,1 +1,1 @@
-export { default as emailProcess } from './email.job';
+export { default as emailProcess } from './email.process';

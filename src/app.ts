@@ -1,5 +1,6 @@
 import express, { Application, Request, Response } from 'express';
 import { emailQueue } from './queues';
+import { logger } from './utils';
 
 const app: Application = express();
 

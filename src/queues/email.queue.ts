@@ -9,10 +9,9 @@ const emailQueue: Queue = new Bull('email', {
 	},
 });
 
-emailQueue.process(emailProcess);
-
 const sendNewEmail = (data: any) => {
 	emailQueue.add(data, {});
 };
 
+emailQueue.process(emailProcess);
 export default { sendNewEmail };
