@@ -8,4 +8,5 @@ export default {
 	HOST: process.env.HOST || 'localhost',
 	PORT: process.env.PORT || 1234,
 	API_VERSION: process.env.API_VERSION || 'current_api_version',
+	REDIS_PORT: process.env.REDIS_PORT || 'redis_connection_port',
 } as IConfig;
